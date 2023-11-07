@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>foodies | sardar & son's</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="screen and max-width: 1430px" href="phone.css">
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+
+}
+
+:root {
+    --navbar-height: 59;
+}
+
+body {
+    color: black;
+}
+
+/*.................................... navegation bar start........................................................ */
+
+#navbar {
+    display: flex;
+    align-items: center;
+    height: 85px;
+    position: sticky;
+    justify-content: space-between;
+    top: 0px;
+}
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.6;
+    
+}
+
+#navbar ul {
+    display: flex;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 800;
+}
+
+#navbar ul li {
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a {
+    display: block;
+    margin: 12px;
+    padding: 3px;
+    text-decoration: none;
+    color: white;
+    border-radius: 12px;
+}
+
+#navbar ul li :hover{
+    text-decoration: underline red;
+    display: block;
+    margin: 12px;
+    padding: 3px;
+    text-decoration: none;
+    color: white;
+    border-radius: 12px;
+}
+
+#logo {
+    margin: 34px 45px;
+}
+
+#logo img {
+    margin: 14px 13px;
+    height: 155px;
+    width: 124px;
+    border-radius: 28px;
+    margin-bottom: 1px;
+    padding-bottom: 70px;
+}
+
+input{
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: 600;
+
+}
+.signin{
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+.signin:hover{
+    background-color: transparent;
+    border: none;
+    color: #ff511c;
+}
+.signup{
+    background-color: #ff511c;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    margin-right: 50px;
+}
+.signup:hover{
+    background-color: white;
+    color: #ff511c;;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    margin-right: 50px;
+}
+/*.................................... navigation bar end........................................................ */
+
+.home{
+    display: flex;
+    height: 200px;
+    flex-direction: column;
+    padding: 3px 200px;
+    justify-content: center;
+    align-items: center;
+}
+.home::before{
+    content: "";
+    position: absolute;
+    background-image: url('../img/service.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height:100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.8;
+    top: 0%;
+    left: 0%;
+}
+.home h1{
+    color: black;
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: sans-serif;
+    font-weight: 800;
+}
+.box h2{
+    color: black;
+    font-family: sans-serif;
+    font-weight: 800;
+}
+.our .h-primary{
+    font-family: sans-serif;
+    font-weight: 800;
+    font-size: 2.0rem;
+}
+#services{
+    margin: 34px;
+    padding: 45px;
+    display: flex;
+    width: 380px;
+    background-image: url('../img/party_order.jpg');
+}
+
+#services.box{
+    border:2px;
+    /* box-shadow: rgba(0, 0, 0, 0.32) 0px 1px 4px; */
+    border-radius: 22px;
+    padding: 22px;
+    margin: 33px;
+    height: 250px;
+    font-family: sans-serif;
+}
+#services.box:hover{
+    border:2px;
+    box-shadow: rgba(0, 0, 0, 0.42) 0px 2px 6px;
+    border-radius: 22px;
+    padding: 22px;
+    margin: 33px;
+    height: 250px;
+    font-family: sans-serif;
+}
+#services.box img{
+    align-items: center;
+    margin: -55px;
+    display: block;
+    height: 292px;
+    width: 159px;
+    margin-left: -55px;
+    margin-right: -13px;
+    border-radius: 53px;
+    padding: 34px;
+    padding-right: 46px;
+}
+#service .box h2{
+    font-family: sans-serif;
+    font-weight: 600;
+    color: black;
+}
+</style>
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="../img/eatingbaby.png" alt="pay online">
+        </div>
+        <ul>
+            <li class="item"><a href="http://127.0.0.1:5500/p2/">Home</a></li>
+            <li class="item"><a href="http://127.0.0.1:5500/p2/about.html">About</a></li>
+            <li class="item"><a href="http://127.0.0.1:5500/p2/services.html">Services</a></li>
+            <li class="item"><a href="http://127.0.0.1:5500/p2/Contact.html">Contact</a></li>
+            <!-- <li class="item"><a href="http://127.0.0.1:5500/p2/Inquiry.html">Inquiry</a></li> -->
+
+        </ul>
+        <div>
+            <input class="signin" type="submit" value="Sign In" name="signin">
+            <input class="signup" type="submit" value="Sign Up" name="signup">
+        </div>
+    </nav>
+
+    <section class = "home">
+        <h1 class="h-primary">Welcome To Foodies | Sardar & Son's</h1>
+    </section>
+
+    <section class="our">
+        <h1>
+            <h1 class="h-primary">Our Services</h1>
+        </h1>
+    </section>
+
+    <section class="services-container">
+
+        <a href = "http://127.0.0.1:5500/p2/order.html">
+            <div id="services" class="box">
+                <img src= '../img/chicken_biryani.jpg' alt="error 404">
+                <h2 class="h-secondary centre">Food Ordering</h2>
+            </div>
+        </a>
+        
+        <div id="services" class="box">
+            <img src="../img/party_order.jpg" alt="error 404">
+            <h2 class="h-secondary centre">Party Order</h2>
+        </div>
+
+        <div id="services" class="box">
+            <img src="../img/today_special.jpg" alt="error 404">
+            <h2 class="h-secondary centre">Today Special</h2>
+        </div>
+
+    </section>
+</body>
+
+</html>

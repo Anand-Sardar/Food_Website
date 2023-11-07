@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>foodies | sardar & son's</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="screen and max-width: 1430px" href="phone.css">
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+
+}
+
+:root {
+    --navbar-height: 59;
+}
+
+body {
+    color: black;
+    background: url(../img/contact_us.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+/*.......................................navegation bar .......................................................... */
+
+#navbar {
+    display: flex;
+    align-items: center;
+    height: 85px;
+    position: sticky;
+    justify-content: space-between;
+    top: 0px;
+}
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.6;
+    
+}
+
+#navbar ul {
+    display: flex;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 800;
+}
+
+#navbar ul li {
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a {
+    display: block;
+    margin: 12px;
+    padding: 3px;
+    text-decoration: none;
+    color: white;
+    border-radius: 12px;
+}
+
+#navbar ul li :hover{
+    text-decoration: underline red;
+    display: block;
+    margin: 12px;
+    padding: 3px;
+    text-decoration: none;
+    color: white;
+    border-radius: 12px;
+}
+
+#logo {
+    margin: 34px 45px;
+}
+
+#logo img {
+    margin: 14px 13px;
+    height: 155px;
+    width: 124px;
+    border-radius: 28px;
+    margin-bottom: 1px;
+    padding-bottom: 70px;
+}
+
+input{
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: 600;
+
+}
+.signin{
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+.signin:hover{
+    background-color: transparent;
+    border: none;
+    color: #ff511c;
+}
+.signup{
+    background-color: #ff511c;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    margin-right: 50px;
+}
+.signup:hover{
+    background-color: white;
+    color: #ff511c;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    margin-right: 50px;
+}
+/*.................................... navegation bar end........................................................ */
+.container 
+{
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+}
+    h2 {
+        color: #333;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 16px;
+        }
+
+        input .submit{
+            background-color: #ff511c;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        input .submit:hover {
+            background-color: white;
+            color: #ff511c;
+        }
+        .container .submit{
+            background-color: #ff511c;
+            color: white;
+            border-radius: 5px;
+            border: none;
+        }
+/* .....................................contact end............................................... */
+
+</style>
+
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="../img/eatingbaby.png" alt="pay online">
+        </div>
+        <ul>
+            <li class="item"><a href="http://127.0.0.1:5500/p2/">Home</a></li>
+            <li class="item"><a href="http://127.0.0.1:5500/p2/about.html">About</a></li>
+            <li class="item"><a href="http://127.0.0.1:5500/p2/services.html">Services</a></li>
+            <li class="item"><a href="http://127.0.0.1:5500/p2/Contact.html">Contact</a></li>
+            <!-- <li class="item"><a href="http://127.0.0.1:5500/p2/Inquiry.html">Inquiry</a></li> -->
+
+        </ul>
+        <div>
+            <input class="signin" type="submit" value="Sign In" name="signin">
+            <input class="signup" type="submit" value="Sign Up" name="signup">
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>Feedback Form</h2>
+        <p>We appreciate your feedback on our food website. Please share your thoughts with us.</p>
+        
+        <form action="your_action_url" method="post">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+            
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="number">Phone Number:</label>
+            <input type="tel" id="number" name="number" required>
+            
+            <label for="feedback">Feedback:</label>
+            <textarea id="feedback" name="feedback" rows="4" cols="50" required></textarea>
+            
+            <input class="submit" type="submit" value="Submit">
+        </form>
+    </div>
+
+</body>
+
+</html>
